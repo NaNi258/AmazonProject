@@ -34,8 +34,9 @@ public class SkillrarryphoneNumber {
 		String expected_phone="USA (HQ) +1-914-458-4254";
 		Assert.assertEquals(actual_phone, expected_phone);
 
-		driver.quit();
-
+		driver.close();
+		String actual_phone1 = driver.findElement(By.xpath("//h5[text()='Contact Us']/parent::div/descendant::li[1]/child::a")).getText();
+		System.out.println(actual_phone1);
 
 
 	}
